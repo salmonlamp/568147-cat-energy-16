@@ -1,0 +1,55 @@
+.advantages__title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #111111;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.advantages__item {
+  position: relative;
+
+  padding-left: 80px;
+  margin-bottom: 27px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--useful::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
+
+  &--cook::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
+
+  &--easy::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
+
+  &--fast::before {
+    background-image: url("../../img/advantage-clock@1x.png");
+  }
+}
