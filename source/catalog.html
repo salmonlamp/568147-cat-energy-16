@@ -10,25 +10,27 @@
   <body>
 
   <header class="main-header">
-    <div class="container main-header__container">
-      <a class="logo main-header__logo" href="index.html">
-        <img class="logo__pic" src="../img/logo-mobile.svg" width="191" height="38" alt="cat">
-      </a>
-      <button class="main-header__toggle-menu"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+    <div class="main-header__content">
+      <div class="main-header__container">
+        <a class="logo main-header__logo" href="index.html">
+          <img class="logo__pic" src="../img/logo-mobile.svg" width="191" height="38" alt="cat">
+        </a>
+        <button class="main-header__toggle-menu"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+      </div>
+      <nav class="menu main-header__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link  menu__link--current">Каталог продукции</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="menu main-header__menu">
-      <ul class="menu__list display-none">
-        <li class="menu__item">
-          <a class="menu__link" href="index.html">Главная</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link">Каталог продукции</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <section class="catalog">
@@ -219,7 +221,7 @@
         </li>
 
         <li class="catalog__more catalog__item">
-          <div class="catalog__item-container">
+          <div class="catalog__item-container catalog__item-container--more">
             <p class="catalog__more-text">Показать еще 100500 товаров</p>
             <p class="catalog__more-offer">На самом деле вкусов гораздо больше!</p>
             <button class="button button--lull button--big-text catalog__view-all" href="#">Показать все</button>

@@ -121,3 +121,149 @@
   line-height: 16px;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .catalog__container {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .catalog__title {
+    width: 100%;
+    padding-left: 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .catalog__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    padding-top: 90px;
+    margin: 0 30px;
+
+    border: none;
+  }
+
+  .catalog__item-container {
+    width: 324px;
+    height: 100%;
+    padding: 40px 38px;
+
+    background-color: #f2f2f2;
+
+    &--more {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 55px;
+
+      background: none;
+      border-top: 1px solid #f2f2f2;
+    }
+  }
+
+  .catalog__item-content {
+    display: block;
+  }
+
+  .catalog__img {
+    position: relative;
+    bottom: 120px;
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -120px;
+  }
+
+  .catalog__info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .catalog__item-title {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .catalog__feature {
+    margin: 0;
+    padding: 6px 0 17px 0;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .catalog__indicator,
+  .catalog__value {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .catalog__order-link {
+    width: 100%;
+  }
+
+  .catalog__more-text {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding-top: 110px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+
+      background-image: url("../../img/icon-plus.svg");
+    }
+  }
+
+  .catalog__more-offer {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: auto;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog__view-all {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1300px) {
+  .catalog__container {
+    width: 1300px;
+  }
+
+  .catalog__title {
+    padding-left: 40px;
+  }
+
+  .catalog__item {
+    margin: 0 40px;
+  }
+
+  .catalog__item-container {
+    width: 245px;
+  }
+}
