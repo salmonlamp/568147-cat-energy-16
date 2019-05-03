@@ -176,10 +176,15 @@
   .catalog__img {
     position: relative;
     bottom: 120px;
+    left: -38px;
 
-    display: block;
-    margin: 0 auto;
+    max-width: 324px;
+    width: 324px;
     margin-bottom: -120px;
+
+    &--small {
+      margin-top: 34px;
+    }
   }
 
   .catalog__info {
@@ -247,6 +252,8 @@
     margin: 0 auto;
     margin-top: auto;
     align-self: flex-start;
+
+    cursor: pointer;
   }
 }
 
@@ -261,9 +268,17 @@
 
   .catalog__item {
     margin: 0 40px;
+    margin-bottom: 25px;
   }
 
   .catalog__item-container {
+    width: 245px;
+  }
+
+  .catalog__img {
+    margin-bottom: -106px;
+
+    max-width: 245px;
     width: 245px;
   }
 }
