@@ -1,5 +1,5 @@
 .main-footer {
-  padding-top: 22px;
+  padding-top: 24px;
 
   background-color: #f2f2f2;
 }
@@ -15,9 +15,31 @@
 }
 
 @media (min-width: 768px) {
+  .main-footer {
+    padding-top: 49px;
+    padding-bottom: 53px;
+  }
+
   .main-footer__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .main-footer__logo {
+    width: 128px;
+    height: 24px;
+    margin: 0;
+  }
+
+  .main-footer__social {
+    margin: 0;
+    margin-left: 21px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .main-footer {
+    padding-top: 50px;
   }
 }

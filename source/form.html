@@ -36,6 +36,134 @@
     </div>
   </header>
 
+  <section class="request">
+    <div class="request__header container">
+      <h2 class="request__title">Подбор программы</h2>
+      <p class="request__offer">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    </div>
+
+    <form class="request__form">
+
+      <fieldset class="request__fieldset">
+        <div class="request__line  visually-hidden">
+          <div class="container request__line-container">
+            <legend class="request__legend">Информация о коте</legend>
+          </div>
+        </div>
+
+        <div div class="request__container">
+          <ul class="request__list request__list--cat-info">
+            <li class="request__item request__item--text">
+              <label class="request__label request__label--name" for="request__cat-name">Имя:*</label>
+              <input class="request__text-input" type="text" id="request__cat-name" placeholder="Барсик">
+            </li>
+            <li class="request__item request__item--text">
+              <label class="request__label request__label--weight" for="request__cat-weight">Вес (кг):*</label>
+              <input class="request__text-input" type="text" id="request__cat-weight" placeholder="7">
+            </li>
+            <li class="request__item request__item--text">
+              <label class="request__label request__label--age" for="request__cat-age">Возраст (лет): </label>
+              <input class="request__text-input" type="text" id="request__cat-age" placeholder="7">
+            </li>
+          </ul>
+
+          <ul class="request__list request__list--program">
+            <li class="request__item request__item--radio">
+              <input class="request__radio visually-hidden" type="radio" id="request__program--slim" name="request__program" value="slim" checked>
+              <label class="request__label" for="request__program--slim">Похудение</label>
+            </li>
+            <li class="request__item request__item--radio">
+              <input class="request__radio visually-hidden" type="radio" id="request__program--pro" name="request__program" value="pro">
+              <label class="request__label" for="request__program--pro">Набор массы</label>
+            </li>
+            <li class="request__item request__item--radio">
+              <input class="request__radio visually-hidden" type="radio" id="request__program--help" name="request__program" value="help">
+              <label class="request__label" for="request__program--help">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
+
+      </fieldset>
+
+      <fieldset class="request__fieldset">
+        <div class="request__line">
+          <div class="container request__line-container">
+            <legend class="request__legend">Контактные данные (владельца кота)</legend>
+          </div>
+        </div>
+        <ul class="request__list">
+          <li class="request__item request__item--text">
+            <label class="request__label request__label--email" for="request__owner-email">E-mail:*</label>
+            <div class="request__icon request__icon--email">
+              <input class="request__text-input request__text-input--icon" type="email" id="request__owner-email" placeholder="kuklachev@gmail.com">
+            </div>
+          </li>
+          <li class="request__item request__item--text">
+            <label class="request__label request__label--phone" for="request__owner-phone">Телефон:*</label>
+            <div class="request__icon request__icon--phone">
+              <input class="request__text-input request__text-input--icon" type="phone" id="request__owner-phone" placeholder="8 (960) 900-60-90">
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="request__fieldset request__fieldset--comment">
+        <div class="request__line">
+          <div class="container request__line-container">
+            <legend class="request__legend">Комментарий</legend>
+          </div>
+        </div>
+        <ul class="request__list">
+          <li class="request__item">
+            <label class="request__label visually-hidden" for="request__comment-text">Повадки кота</label>
+            <textarea class="request__textarea" id="request__comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="request__fieldset request__fieldset--additional">
+        <div class="request__line request__line--additional">
+          <div class="container request__line-container">
+            <legend class="request__legend">Дополнительно</legend>
+          </div>
+        </div>
+        <ul class="request__list request__list--additional">
+          <li class="request__item request__item--checkbox">
+            <input class="request__checkbox visually-hidden" id="request__additional-sweetener" type="checkbox" name="sweetener" checked>
+            <label class="request__label" for="request__additional-sweetener">Сахарозаменитель</label>
+          </li>
+          <li class="request__item request__item--checkbox">
+            <input class="request__checkbox visually-hidden" id="request__additional-water" type="checkbox" name="water" checked>
+            <label class="request__label" for="request__additional-water">Питьевая вода</label>
+          </li>
+          <li class="request__item request__item--checkbox">
+            <input class="request__checkbox visually-hidden" id="request__additional-milk" type="checkbox" name="milk" checked>
+            <label class="request__label" for="request__additional-milk">Молоко</label>
+          </li>
+          <li class="request__item request__item--checkbox">
+            <input class="request__checkbox visually-hidden" id="request__additional-vitamin" type="checkbox" name="vitamin" checked>
+            <label class="request__label" for="request__additional-vitamin">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <div class="container request__footer">
+      <button class="button button--big-text request__button" type="submit">Отправить заявку</button>
+      <p class="request__req">* — Обязательные поля</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="map">
+    <div class="map__text">
+      <p class="map__tagline">приглашаем<br>к сотрудничеству дилеров!</p>
+      <div class="map__address">
+        <p class="map__address-item">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="map__address-item">Санкт-Петербург</p>
+      </div>
+    </div>
+  </section>
+
   <footer class="main-footer">
     <div class="container main-footer__container">
       <a class="logo main-footer__logo" href="index.html">
