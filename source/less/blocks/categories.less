@@ -1,9 +1,9 @@
 .categories {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .categories__item {
-  padding: 6px 20px 20px 20px;
+  padding: 7px 20px 20px 20px;
   margin-bottom: 20px;
 
   background-color: #f2f2f2;
@@ -16,8 +16,8 @@
 .categories__title {
   position: relative;
 
-  padding-left: 70px;
-  margin-bottom: 30px;
+  padding-left: 71px;
+  margin-bottom: 28px;
 
   font-size: 24px;
   line-height: 37px;
@@ -29,7 +29,7 @@
     content: "";
 
     position: absolute;
-    left: 0;
+    left: 2px;
     top: 50%;
 
     display: block;
@@ -45,7 +45,7 @@
     content: "";
 
     position: absolute;
-    left: 0;
+    left: 2px;
     top: 50%;
 
     display: block;
@@ -63,6 +63,9 @@
   }
 
   &--pro::after {
+    top: 51%;
+    left: 0;
+
     width: 67px;
     height: 28px;
     margin-top: -16px;
@@ -74,7 +77,11 @@
 
 .categories__desc {
   padding-bottom: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
 
   border-bottom: 1px solid #d9d9d9;
 }
@@ -82,7 +89,7 @@
 .categories__link {
   position: relative;
 
-  padding-right: 37px;
+  padding-right: 36px;
 
   font-size: 16px;
   line-height: 16px;
@@ -132,13 +139,13 @@
   .categories__title {
     padding-left: 0;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     font-size: 36px;
 
     &::before {
       left: 394px;
-      top: 50%;
+      top: 42%;
 
       width: 200px;
       height: 200px;
@@ -166,10 +173,17 @@
   }
 
   .categories__desc {
-    width: 340px;
+    width: 380px;
     margin-bottom: 35px;
 
+    font-size: 16px;
+    line-height: 24px;
+
     border: none;
+
+    &--pro {
+      width: 340px;
+    }
   }
 
   .categories__link {
@@ -203,17 +217,21 @@
 
   .categories__title {
     padding-left: 160px;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
 
     font-size: 36px;
 
     &::before {
+      left: 0;
+
       width: 100px;
       height: 100px;
       margin-top: -48px;
     }
 
     &--slim::after {
+      left: 0;
+
       width: 70px;
       height: 97px;
       margin-top: -53px;
@@ -230,6 +248,9 @@
 
   .categories__desc {
     margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 24px;
 
     border: none;
   }

@@ -35,6 +35,13 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--current:hover,
+  &--current:focus,
+  &--current:active {
+    opacity: 1;
+    cursor: default;
+  }
 }
 
 @media (min-width: 768px) {
@@ -51,7 +58,7 @@
   }
 
   .menu__item {
-    margin-left: 34px;
+    margin-left: 35px;
 
     &:first-child {
       margin-left: 0;
@@ -75,6 +82,10 @@
 }
 
 @media (min-width: 1300px) {
+  .menu__item {
+    margin-left: 34px;
+  }
+
   .menu__link {
     font-size: 20px;
     line-height: 24px;
