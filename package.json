@@ -47,6 +47,5 @@
     "node": "8.15"
   },
   "dependencies": {
-    "stylefmt": "^6.0.3"
   }
 }
