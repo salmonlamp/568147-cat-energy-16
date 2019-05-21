@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .htmlacademy__name {
@@ -16,6 +20,16 @@
   width: 41px;
   height: 48px;
   margin-right: -8px;
+
+  fill: #666666;
+
+  transition: all 0.3s;
+}
+
+.htmlacademy__link:hover .htmlacademy__logo,
+.htmlacademy__link:focus .htmlacademy__logo,
+.htmlacademy__link:active .htmlacademy__logo {
+  fill: #68b738;
 }
 
 @media (min-width: 768px) {

@@ -3,10 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <header class="main-header">
     <div class="main-header__content">
@@ -42,28 +49,28 @@
       <p class="request__offer">Заполните анкету и мы подберем программу питания для вашего кота</p>
     </div>
 
-    <form class="request__form">
+    <form class="request__form" action="https://echo.htmlacademy.ru" method="post">
 
       <fieldset class="request__fieldset">
-        <div class="request__line  visually-hidden">
+        <div class="request__line visually-hidden">
           <div class="container request__line-container">
             <legend class="request__legend">Информация о коте</legend>
           </div>
         </div>
 
-        <div div class="request__container">
+        <div class="request__container">
           <ul class="request__list request__list--cat-info">
             <li class="request__item request__item--text">
               <label class="request__label request__label--name" for="request__cat-name">Имя:*</label>
-              <input class="request__text-input" type="text" id="request__cat-name" placeholder="Барсик">
+              <input class="request__text-input" type="text" id="request__cat-name" name="cat-name" placeholder="Барсик" required>
             </li>
             <li class="request__item request__item--text">
               <label class="request__label request__label--weight" for="request__cat-weight">Вес (кг):*</label>
-              <input class="request__text-input" type="text" id="request__cat-weight" placeholder="7">
+              <input class="request__text-input" type="text" id="request__cat-weight" name="cat-weight" placeholder="7" required>
             </li>
             <li class="request__item request__item--text">
               <label class="request__label request__label--age" for="request__cat-age">Возраст (лет): </label>
-              <input class="request__text-input" type="text" id="request__cat-age" placeholder="7">
+              <input class="request__text-input" type="text" id="request__cat-age" name="cat-age" placeholder="7">
             </li>
           </ul>
 
@@ -95,13 +102,19 @@
           <li class="request__item request__item--text">
             <label class="request__label request__label--email" for="request__owner-email">E-mail:*</label>
             <div class="request__icon request__icon--email">
-              <input class="request__text-input request__text-input--icon" type="email" id="request__owner-email" placeholder="kuklachev@gmail.com">
+              <input class="request__text-input request__text-input--icon" type="email" id="request__owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+              <svg class="request__svg request__svg--email" width="17" height="13" aria-hidden="true" role="presentation" focusable="false">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
             </div>
           </li>
           <li class="request__item request__item--text">
             <label class="request__label request__label--phone" for="request__owner-phone">Телефон:*</label>
             <div class="request__icon request__icon--phone">
-              <input class="request__text-input request__text-input--icon" type="phone" id="request__owner-phone" placeholder="8 (960) 900-60-90">
+              <input class="request__text-input request__text-input--icon" type="tel" id="request__owner-phone" name="owner-phone" required>
+              <svg class="request__svg request__svg--phone" width="17" height="13" aria-hidden="true" role="presentation" focusable="false">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
             </div>
           </li>
         </ul>
@@ -116,7 +129,7 @@
         <ul class="request__list">
           <li class="request__item">
             <label class="request__label visually-hidden" for="request__comment-text">Повадки кота</label>
-            <textarea class="request__textarea" id="request__comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="request__textarea" id="request__comment-text" name="comment-text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </li>
         </ul>
       </fieldset>
@@ -155,6 +168,7 @@
   </section>
 
   <section class="map">
+    <h2 class="visually-hidden">Карта</h2>
     <div class="map__text">
       <p class="map__tagline">приглашаем<br>к сотрудничеству дилеров!</p>
       <div class="map__address">
@@ -162,7 +176,7 @@
         <p class="map__address-item">Санкт-Петербург</p>
       </div>
     </div>
-    <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab65cec0feaca1541d7d26239dc392617b3914ad7ee5fc76e741ace38d8806597&amp;source=constructor" width="100%" height="360" frameborder="0"></iframe>
+    <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab65cec0feaca1541d7d26239dc392617b3914ad7ee5fc76e741ace38d8806597&amp;source=constructor" height="360"></iframe>
   </section>
 
   <footer class="main-footer">
@@ -174,29 +188,49 @@
       <li class="social__item">
         <a class="social__link social__link--vk" href="#">
           <span class="visually-hidden">Ссылка на группу во Вконтакте</span>
+          <svg class="social__icon social__icon--vk social__icon--mobile" width="22" height="12" aria-hidden="true" role="img">
+            <use xlink:href="#icon-vk-mobile"></use>
+          </svg>
+          <svg class="social__icon social__icon--vk social__icon--tablet" width="30" height="16" aria-hidden="true" role="img">
+            <use xlink:href="#icon-vk"></use>
+          </svg>
         </a>
       </li>
       <li class="social__item social__item--second">
         <a class="social__link social__link--inst" href="#">
           <span class="visually-hidden">Ссылка на аккаунт в Instagram</span>
+          <svg class="social__icon social__icon--insta social__icon--mobile" width="16" height="16" aria-hidden="true" role="img">
+            <use xlink:href="#icon-insta-mobile"></use>
+          </svg>
+          <svg class="social__icon social__icon--insta social__icon--tablet" width="23" height="23" aria-hidden="true" role="img">
+            <use xlink:href="#icon-insta"></use>
+          </svg>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__link--fb" href="#">
           <span class="visually-hidden">Ссылка на страницу в Facebook</span>
+          <svg class="social__icon social__icon--fb social__icon--mobile" width="10" height="19" aria-hidden="true" role="img">
+            <use xlink:href="#icon-fb-mobile"></use>
+          </svg>
+          <svg class="social__icon social__icon--fb social__icon--tablet" width="14" height="28" aria-hidden="true" role="img">
+            <use xlink:href="#icon-fb"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="htmlacademy main-footer__htmlacademy">
-      <a class="htmlacademy__link" href="https://htmlacademy.ru">
+      <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="htmlacademy__name">HTML Academy</p>
-        <img class="htmlacademy__logo" src="../img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        <svg class="htmlacademy__logo" width="27" height="34" aria-hidden="true" role="img">
+          <use xlink:href="#icon-htmlacademy"></use>
+        </svg>
       </a>
     </div>
   </div>
   </footer>
 
   <script src="js/mobile-menu.js"></script>
-  <script src="js/picturefill.js.js"></script>
+  <script src="js/picturefill.js"></script>
   </body>
 </html>
