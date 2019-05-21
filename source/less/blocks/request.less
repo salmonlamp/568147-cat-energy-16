@@ -1,5 +1,5 @@
 .request {
-  margin-bottom: 23px;
+  margin-bottom: 30px;
 }
 
 .request__header {
@@ -28,7 +28,7 @@
 
 .request__fieldset {
   border: none;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
 .request__line {
@@ -77,7 +77,7 @@
   list-style: none;
 
   &--cat-info {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   &--program {
@@ -109,7 +109,7 @@
   }
 
   &--checkbox {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 }
 
@@ -234,35 +234,34 @@
   position: relative;
 
   flex-grow: 1;
+}
 
-  &::after {
-    content: "";
+.request__svg {
+  position: absolute;
+  top: 50%;
+  right: 16px;
 
-    position: absolute;
-    top: 50%;
-    right: 16px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--email::after {
+  &--email {
     width: 17px;
     height: 13px;
     margin-top: -6px;
-
-    background-image: url("../../img/icon-mail.svg");
   }
 
-  &--phone::after {
+  &--phone {
     right: 14px;
 
     width: 20px;
     height: 20px;
     margin-top: -9px;
-
-    background-image: url("../../img/icon-phone.svg");
   }
+}
+
+.request__text-input:focus + .request__svg {
+  fill: #68b738;
+}
+
+.request__text-input--error + .request__svg {
+  fill: #ff8282;
 }
 
 .request__textarea {
@@ -285,6 +284,9 @@
 
   padding-left: 46px;
 
+  cursor: pointer;
+  transition: all 0.3s;
+
   &::after {
     content: "";
 
@@ -297,6 +299,24 @@
     margin-top: -15px;
 
     border: 1px solid #cfcfcf;
+
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.request__checkbox:hover + .request__label {
+  ::after {
+    border-color: red;
   }
 }
 
@@ -310,7 +330,7 @@
 }
 
 .request__footer {
-  margin-top: -11px;
+  margin-top: -7px;
 }
 
 .request__button {
@@ -357,7 +377,7 @@
     }
 
     &--additional {
-      margin-top: -23px;
+      margin-top: -11px;
     }
   }
 
@@ -391,7 +411,7 @@
     padding-right: 37px;
 
     &--cat-info {
-      margin-bottom: 72px;
+      margin-bottom: 70px;
     }
 
     &--program {
@@ -412,7 +432,7 @@
 
   .request__item {
     &--text {
-      margin-bottom: 19px;
+      margin-bottom: 18px;
     }
 
     &--radio {
@@ -429,21 +449,29 @@
     font-size: 20px;
     line-height: 20px;
 
+    &--name {
+      margin-right: 17px;
+    }
+
     &--weight {
-      margin-right: 16px;
+      margin-right: 20px;
     }
 
     &--age {
-      margin-right: 14px;
+      margin-right: 18px;
     }
 
     &--email {
-      margin-right: 18px;
+      margin-right: 21px;
+    }
+
+    &--phone {
+      margin-right: 14px;
     }
   }
 
   .request__text-input {
-    padding: 11px 21px;
+    padding: 11px 17px;
 
     font-size: 20px;
     line-height: 20px;
@@ -473,19 +501,19 @@
     }
   }
 
-  .request__icon {
-    &--email::after {
+  .request__svg {
+    &--email {
       right: 18px;
     }
 
-    &--phone::after {
+    &--phone {
       right: 15px;
     }
   }
 
   .request__textarea {
-    min-height: 187px;
-    padding: 11px 17px;
+    min-height: 173px;
+    padding: 9px 18px;
 
     font-size: 20px;
     line-height: 30px;
@@ -594,6 +622,7 @@
 
     &--text {
       width: 570px;
+      margin-bottom: 19px;
     }
 
     &--checkbox {
@@ -607,12 +636,16 @@
     }
   }
 
-  .request__icon {
-    &--email::after {
+  .request__text-input {
+    padding: 11px 18px;
+  }
+
+  .request__svg {
+    &--email {
       right: 19px;
     }
 
-    &--phone::after {
+    &--phone {
       right: 18px;
     }
   }
