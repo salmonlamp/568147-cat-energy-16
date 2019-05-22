@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0;
   padding-top: 23px;
-  padding-bottom: 19px;
+  padding-bottom: 17px;
   margin-left: -5px;
 
   list-style: none;
@@ -26,14 +26,16 @@
 
 .social__link {
   display: block;
+
+  &--vk {
+    margin-top: -3px;
+  }
 }
 
 .social__icon {
-  transition: all 0.3s;
+  fill: #666666;
 
-  &--tablet {
-    display: none;
-  }
+  transition: all 0.3s;
 
   &:hover,
   &:focus,
@@ -64,12 +66,19 @@
   }
 
   .social__icon {
-    &--mobile {
-      display: none;
+    &--vk {
+      width: 30px;
+      height: 16px;
     }
 
-    &--tablet {
-      display: block;
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
     }
   }
 }

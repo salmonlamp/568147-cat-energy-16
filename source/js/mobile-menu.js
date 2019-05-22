@@ -1,6 +1,8 @@
 var menu = document.querySelector('.main-header__menu');
 var close_menu = document.querySelector('.main-header__toggle-menu');
 
+close_menu.classList.remove('display-none');
+
 close_menu.addEventListener( 'click', function() {
   menu.classList.toggle('display-none');
   close_menu.classList.toggle('main-header__toggle-menu--close');

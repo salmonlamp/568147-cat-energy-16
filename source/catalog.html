@@ -25,9 +25,11 @@
             <img class="logo__pic" src="../img/logo-mobile.svg" width="191" height="38" alt="cat">
           </picture>
         </a>
-        <button class="main-header__toggle-menu"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+        <button class="main-header__toggle-menu display-none"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+        <!-- main-header__toggle-menu\-\-close -->
       </div>
       <nav class="menu main-header__menu">
+      <!-- display-none -->
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Главная</a>
@@ -49,7 +51,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/chicken-small-desktop@1x.webp 1x, ../img/chicken-small-desktop@2x.webpwebp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/chicken-small-desktop@1x.png 1x, ../img/chicken-small-desktop@2x.png 2x">
@@ -82,7 +84,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/chicken-big-desktop@1x.webp 1x, ../img/chicken-big-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/chicken-big-desktop@1x.png 1x, ../img/chicken-big-desktop@2x.png 2x">
@@ -115,7 +117,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/fish-small-desktop@1x.webp 1x, ../img/fish-small-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/fish-small-desktop@1x.png 1x, ../img/fish-small-desktop@2x.png 2x">
@@ -148,7 +150,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/fish-big-desktop@1x.webp 1x, ../img/fish-big-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/fish-big-desktop@1x.png 1x, ../img/fish-big-desktop@2x.png 2x">
@@ -181,7 +183,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/buckwheat-small-desktop@1x.webp 1x, ../img/buckwheat-small-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/buckwheat-small-desktop@1x.png 1x, ../img/buckwheat-small-desktop@2x.png 2x">
@@ -214,7 +216,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/buckwheat-big-desktop@1x.webp 1x, ../img/buckwheat-big-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/buckwheat-big-desktop@1x.png 1x, ../img/buckwheat-big-desktop@2x.png 2x">
@@ -247,7 +249,7 @@
 
         <li class="catalog__item">
           <div class="catalog__content">
-            <a href="#">
+            <a class="catalog__img-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1300px)"  srcset="../img/rice-small-desktop@1x.webp 1x, ../img/rice-small-desktop@2x.webp 2x">
               <source media="(min-width: 1300px)"  srcset="../img/rice-small-desktop@1x.png 1x, ../img/rice-small-desktop@2x.png 2x">
@@ -279,8 +281,8 @@
         </li>
 
         <li class="catalog__item catalog__more">
-          <p class="catalog__more-tagline">Показать еще 100500 товаров</p>
-          <p class="catalog__more-offer">На самом деле вкусов гораздо больше!</p>
+          <p class="catalog__more-tagline paragraph">Показать еще 100500 товаров</p>
+          <p class="catalog__more-offer paragraph">На самом деле вкусов гораздо больше!</p>
           <a class="button button--big-text button--lull catalog__more-link" href="#">Показать все</a>
         </li>
 
@@ -299,8 +301,8 @@
           <div class="commodity__content">
             <h3 class="commodity__item-title">Сахарозаменитель</h3>
             <div class="commodity__info">
-              <p class="commodity__feature">1 упаковка (100 г)</p>
-              <p class="commodity__feature">200 Р.</p>
+              <p class="commodity__feature paragraph">1 упаковка (100 г)</p>
+              <p class="commodity__feature paragraph">200 Р.</p>
             </div>
           </div>
           <a class="button button--big-text commodity__order-link" href="#">Заказать</a>
@@ -309,8 +311,8 @@
           <div class="commodity__content">
             <h3 class="commodity__item-title">Питьевая вода</h3>
             <div class="commodity__info">
-              <p class="commodity__feature">5 литров</p>
-              <p class="commodity__feature">50 Р.</p>
+              <p class="commodity__feature paragraph">5 литров</p>
+              <p class="commodity__feature paragraph">50 Р.</p>
             </div>
           </div>
           <a class="button button--big-text commodity__order-link" href="#">Заказать</a>
@@ -319,8 +321,8 @@
           <div class="commodity__content">
             <h3 class="commodity__item-title">Молоко</h3>
             <div class="commodity__info">
-              <p class="commodity__feature">1 литр</p>
-              <p class="commodity__feature">100 Р.</p>
+              <p class="commodity__feature paragraph">1 литр</p>
+              <p class="commodity__feature paragraph">100 Р.</p>
             </div>
           </div>
           <a class="button button--big-text commodity__order-link" href="#">Заказать</a>
@@ -329,15 +331,15 @@
           <div class="commodity__content">
             <h3 class="commodity__item-title">Витамины</h3>
             <div class="commodity__info">
-              <p class="commodity__feature">1 упаковка (30 г)</p>
-              <p class="commodity__feature">300 Р.</p>
+              <p class="commodity__feature paragraph">1 упаковка (30 г)</p>
+              <p class="commodity__feature paragraph">300 Р.</p>
             </div>
           </div>
           <a class="button button--big-text commodity__order-link" href="#">Заказать</a>
         </li>
       </ul>
       <div class="commodity__gift">
-        <p class="commodity__gift-tagline">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
+        <p class="commodity__gift-tagline paragraph">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
       </div>
     </div>
   </section>
@@ -345,10 +347,10 @@
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
     <div class="map__text">
-      <p class="map__tagline">приглашаем<br>к сотрудничеству дилеров!</p>
+      <p class="map__tagline paragraph">приглашаем<br>к сотрудничеству дилеров!</p>
       <div class="map__address">
-        <p class="map__address-item">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="map__address-item">Санкт-Петербург</p>
+        <p class="map__address-item paragraph">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="map__address-item paragraph">Санкт-Петербург</p>
       </div>
     </div>
     <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab65cec0feaca1541d7d26239dc392617b3914ad7ee5fc76e741ace38d8806597&amp;source=constructor" height="360"></iframe>
@@ -366,9 +368,6 @@
             <svg class="social__icon social__icon--vk social__icon--mobile" width="22" height="12" aria-hidden="true" role="img">
               <use xlink:href="#icon-vk-mobile"></use>
             </svg>
-            <svg class="social__icon social__icon--vk social__icon--tablet" width="30" height="16" aria-hidden="true" role="img">
-              <use xlink:href="#icon-vk"></use>
-            </svg>
           </a>
         </li>
         <li class="social__item social__item--second">
@@ -376,9 +375,6 @@
             <span class="visually-hidden">Ссылка на аккаунт в Instagram</span>
             <svg class="social__icon social__icon--insta social__icon--mobile" width="16" height="16" aria-hidden="true" role="img">
               <use xlink:href="#icon-insta-mobile"></use>
-            </svg>
-            <svg class="social__icon social__icon--insta social__icon--tablet" width="23" height="23" aria-hidden="true" role="img">
-              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
@@ -388,15 +384,12 @@
             <svg class="social__icon social__icon--fb social__icon--mobile" width="10" height="19" aria-hidden="true" role="img">
               <use xlink:href="#icon-fb-mobile"></use>
             </svg>
-            <svg class="social__icon social__icon--fb social__icon--tablet" width="14" height="28" aria-hidden="true" role="img">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
           </a>
         </li>
       </ul>
       <div class="htmlacademy main-footer__htmlacademy">
         <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <p class="htmlacademy__name">HTML Academy</p>
+          <p class="htmlacademy__name paragraph">HTML Academy</p>
           <svg class="htmlacademy__logo" width="27" height="34" aria-hidden="true" role="img">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>

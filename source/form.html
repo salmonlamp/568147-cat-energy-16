@@ -25,9 +25,11 @@
             <img class="logo__pic" src="../img/logo-mobile.svg" width="191" height="38" alt="cat">
           </picture>
         </a>
-        <button class="main-header__toggle-menu"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+        <button class="main-header__toggle-menu display-none"><span class="visually-hidden">Переключатель выпадающего меню</span></button>
+        <!-- main-header__toggle-menu\-\-close -->
       </div>
       <nav class="menu main-header__menu">
+      <!-- display-none -->
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="index.html">Главная</a>
@@ -46,17 +48,13 @@
   <section class="request">
     <div class="request__header container">
       <h2 class="request__title">Подбор программы</h2>
-      <p class="request__offer">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="request__offer paragraph">Заполните анкету и мы подберем программу питания для вашего кота</p>
     </div>
 
     <form class="request__form" action="https://echo.htmlacademy.ru" method="post">
 
       <fieldset class="request__fieldset">
-        <div class="request__line visually-hidden">
-          <div class="container request__line-container">
-            <legend class="request__legend">Информация о коте</legend>
-          </div>
-        </div>
+        <legend class="request__legend visually-hidden">Информация о коте</legend>
 
         <div class="request__container">
           <ul class="request__list request__list--cat-info">
@@ -93,11 +91,10 @@
       </fieldset>
 
       <fieldset class="request__fieldset">
-        <div class="request__line">
-          <div class="container request__line-container">
-            <legend class="request__legend">Контактные данные (владельца кота)</legend>
-          </div>
-        </div>
+        <legend class="request__legend request__legend--owner">
+          <span class="request__legend-title">Контактные данные (владельца кота)</span>
+        </legend>
+
         <ul class="request__list">
           <li class="request__item request__item--text">
             <label class="request__label request__label--email" for="request__owner-email">E-mail:*</label>
@@ -121,11 +118,9 @@
       </fieldset>
 
       <fieldset class="request__fieldset request__fieldset--comment">
-        <div class="request__line">
-          <div class="container request__line-container">
-            <legend class="request__legend">Комментарий</legend>
-          </div>
-        </div>
+        <legend class="request__legend request__legend--comment">
+          <span class="request__legend-title">Комментарий</span>
+        </legend>
         <ul class="request__list">
           <li class="request__item">
             <label class="request__label visually-hidden" for="request__comment-text">Повадки кота</label>
@@ -135,11 +130,9 @@
       </fieldset>
 
       <fieldset class="request__fieldset request__fieldset--additional">
-        <div class="request__line request__line--additional">
-          <div class="container request__line-container">
-            <legend class="request__legend">Дополнительно</legend>
-          </div>
-        </div>
+        <legend class="request__legend request__legend--additional">
+          <span class="request__legend-title">Дополнительно</span>
+        </legend>
         <ul class="request__list request__list--additional">
           <li class="request__item request__item--checkbox">
             <input class="request__checkbox visually-hidden" id="request__additional-sweetener" type="checkbox" name="sweetener" checked>
@@ -162,7 +155,7 @@
 
       <div class="container request__footer">
       <button class="button button--big-text request__button" type="submit">Отправить заявку</button>
-      <p class="request__req">* — Обязательные поля</p>
+      <p class="request__req paragraph">* — Обязательные поля</p>
       </div>
     </form>
   </section>
@@ -170,64 +163,55 @@
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
     <div class="map__text">
-      <p class="map__tagline">приглашаем<br>к сотрудничеству дилеров!</p>
+      <p class="map__tagline paragraph">приглашаем<br>к сотрудничеству дилеров!</p>
       <div class="map__address">
-        <p class="map__address-item">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="map__address-item">Санкт-Петербург</p>
+        <p class="map__address-item paragraph">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="map__address-item paragraph">Санкт-Петербург</p>
       </div>
     </div>
     <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab65cec0feaca1541d7d26239dc392617b3914ad7ee5fc76e741ace38d8806597&amp;source=constructor" height="360"></iframe>
   </section>
 
   <footer class="main-footer">
-  <div class="container main-footer__container">
-    <a class="logo main-footer__logo">
-      <img class="logo__pic" src="../img/logo-footer.svg" width="128" height="24" alt="cat energy">
-    </a>
-    <ul class="social main-footer__social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="#">
-          <span class="visually-hidden">Ссылка на группу во Вконтакте</span>
-          <svg class="social__icon social__icon--vk social__icon--mobile" width="22" height="12" aria-hidden="true" role="img">
-            <use xlink:href="#icon-vk-mobile"></use>
-          </svg>
-          <svg class="social__icon social__icon--vk social__icon--tablet" width="30" height="16" aria-hidden="true" role="img">
-            <use xlink:href="#icon-vk"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item social__item--second">
-        <a class="social__link social__link--inst" href="#">
-          <span class="visually-hidden">Ссылка на аккаунт в Instagram</span>
-          <svg class="social__icon social__icon--insta social__icon--mobile" width="16" height="16" aria-hidden="true" role="img">
-            <use xlink:href="#icon-insta-mobile"></use>
-          </svg>
-          <svg class="social__icon social__icon--insta social__icon--tablet" width="23" height="23" aria-hidden="true" role="img">
-            <use xlink:href="#icon-insta"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--fb" href="#">
-          <span class="visually-hidden">Ссылка на страницу в Facebook</span>
-          <svg class="social__icon social__icon--fb social__icon--mobile" width="10" height="19" aria-hidden="true" role="img">
-            <use xlink:href="#icon-fb-mobile"></use>
-          </svg>
-          <svg class="social__icon social__icon--fb social__icon--tablet" width="14" height="28" aria-hidden="true" role="img">
-            <use xlink:href="#icon-fb"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <div class="htmlacademy main-footer__htmlacademy">
-      <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="htmlacademy__name">HTML Academy</p>
-        <svg class="htmlacademy__logo" width="27" height="34" aria-hidden="true" role="img">
-          <use xlink:href="#icon-htmlacademy"></use>
-        </svg>
+    <div class="container main-footer__container">
+      <a class="logo main-footer__logo">
+        <img class="logo__pic" src="../img/logo-footer.svg" width="128" height="24" alt="cat energy">
       </a>
+      <ul class="social main-footer__social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually-hidden">Ссылка на группу во Вконтакте</span>
+            <svg class="social__icon social__icon--vk social__icon--mobile" width="22" height="12" aria-hidden="true" role="img">
+              <use xlink:href="#icon-vk-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item social__item--second">
+          <a class="social__link social__link--inst" href="#">
+            <span class="visually-hidden">Ссылка на аккаунт в Instagram</span>
+            <svg class="social__icon social__icon--insta social__icon--mobile" width="16" height="16" aria-hidden="true" role="img">
+              <use xlink:href="#icon-insta-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Ссылка на страницу в Facebook</span>
+            <svg class="social__icon social__icon--fb social__icon--mobile" width="10" height="19" aria-hidden="true" role="img">
+              <use xlink:href="#icon-fb-mobile"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="htmlacademy main-footer__htmlacademy">
+        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="htmlacademy__name paragraph">HTML Academy</p>
+          <svg class="htmlacademy__logo" width="27" height="34" aria-hidden="true" role="img">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
   </footer>
 
   <script src="js/mobile-menu.js"></script>
